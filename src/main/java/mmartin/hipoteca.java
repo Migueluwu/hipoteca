@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package mmartin;
 
 import java.util.Scanner;
@@ -18,7 +14,10 @@ public class hipoteca {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        final int MES_ANO=14;
+        final int MES_ANO=12;
+        final int DURACION_MINIMA=5;
+        final int DURACION_MAXIMA=30;
+        final int PLAZO_EDAD =75;
         int edad;
         double sueldoMes;
         double sueldoAno;
@@ -36,7 +35,8 @@ public class hipoteca {
             if((sueldoAno*5.85)>=hipoteca){
                 System.out.println("introduce la duracion de la hipoteca: ");
                 duracionHipoteca=entradaTeclado.nextInt();
-                if(((duracionHipoteca>=5)&&(duracionHipoteca<=30))&&(duracionHipoteca+edad<=75)){
+                if(((duracionHipoteca>=DURACION_MINIMA)&&(duracionHipoteca<=DURACION_MAXIMA))
+                        &&(duracionHipoteca+edad<=PLAZO_EDAD)){
                     System.out.println("hipoteca valida");
                 }else{
                     System.out.println("duracion de la hipoteca demasidado larga");
